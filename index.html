@@ -17,7 +17,7 @@
             } else if (whatSign === 2) {
             return "paper";
 
-            } else {
+            } else if (whatSign === 3) {
             return "scissors";    
             }   
         }
@@ -30,7 +30,7 @@
                 console.log("You win. Rock beats scissors")
                  
             } else if (playerSelection == "paper" && computerSelection == "rock"){
-                console.log("You win. Rock beats paper")
+                console.log("You win. Paper beats rock")
 
             } else if (playerSelection == "paper" && computerSelection == "scissors"){
                 console.log("You lose. Scissors beats paper")
@@ -40,13 +40,20 @@
 
             } else if (playerSelection == "scissors" && computerSelection == "rock"){
                 console.log("You lose. Rock beats scissors")
-                
-            } else {
+               
+            } else if (playerSelection == computerSelection ){
                 console.log("It's a tie.")
+
+            }  else if (playerSelection != "scissors" || "paper" || "rock") {
+                console.log("You have to pick rock, paper or scissors.") 
             }
         }
-        const playerSelection = "rock";
+
+
+        const playerSelection = prompt("What is your pick?").toLowerCase();
         const computerSelection = computerPlay();
+        console.log("You picked: " + playerSelection);
+        console.log("Computer picked: " + computerSelection);
         console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
