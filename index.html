@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js-file.js" defer></script>
 </head>
 <body>
+
+    <button>Rock</button>
+    <button>Paper</button>
+    <button>Scissors</button>
+
     <script>
 
         function computerPlay() {
@@ -51,6 +57,7 @@
 
 
         const playerSelection = prompt("What is your pick?").toLowerCase();
+        console.log("What is your pick ?")
         const computerSelection = computerPlay();
         console.log("You picked: " + playerSelection);
         console.log("Computer picked: " + computerSelection);
